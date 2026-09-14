@@ -9,8 +9,12 @@
 			margin: 0;
 			min-height: 100vh;
 			display: flex;
+			flex-direction: column;
 			align-items: center;
 			justify-content: center;
+			gap: 2rem;
+			padding: 3rem 2rem;
+			box-sizing: border-box;
 			background-color: #f9f9f9;
 			color: #111111;
 			font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
@@ -19,7 +23,18 @@
 			font-family: Cardo, serif;
 			font-weight: 400;
 			text-align: center;
-			padding: 0 2rem;
+			margin: 0;
+		}
+		img {
+			max-width: 100%;
+			height: auto;
+			border-radius: 0.5rem;
+			box-shadow: 6px 6px 9px rgba(0,0,0,.2);
+		}
+		p {
+			max-width: 620px;
+			line-height: 1.55;
+			margin: 0;
 		}
 		.page-nav-arrow {
 			position: fixed;
@@ -51,5 +66,8 @@
 <body>
 <a href="index.html" class="page-nav-arrow page-nav-arrow-prev" aria-label="Previous page: Home">&#8249;</a>
 <h1>GNC &amp; Control Hardware</h1>
+<img src="images/MAV_navigation.png" alt="MAV navigation" />
+<p>The cool thing about the modern drone hobby is that (just about) everything has already been figured out by the DIY community.</p>
+<p>This hasn&#8217;t stopped me from rolling my own autopilot logic, compiling bespoke firmware, and eventually designing my own flight controller&#8230;</p>
 </body>
 </html>
