@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Aerodynamic Parameters &#8211; Blackstock</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&amp;family=Cardo:ital,wght@0,400;0,700;1,400&amp;display=swap" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+	<style>
+		body {
+			margin: 0;
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 2rem;
+			padding: 3rem 2rem;
+			box-sizing: border-box;
+			background-color: #f9f9f9;
+			color: #111111;
+			font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+		}
+		h1 {
+			font-family: Cardo, serif;
+			font-weight: 400;
+			text-align: center;
+			margin: 0;
+		}
+		p {
+			max-width: 620px;
+			line-height: 1.55;
+			margin: 0;
+		}
+		a:not(.page-nav-arrow) {
+			color: #111111;
+		}
+		a:not(.page-nav-arrow):hover {
+			color: #636363;
+		}
+		table.data-table {
+			border-collapse: collapse;
+			background-color: #ffffff;
+			border-radius: 0.5rem;
+			overflow: hidden;
+			box-shadow: 6px 6px 9px rgba(0,0,0,.2);
+		}
+		table.data-table th,
+		table.data-table td {
+			padding: 0.5rem 1.5rem;
+			text-align: left;
+			border-bottom: 1px solid #e0e0e0;
+		}
+		table.data-table th {
+			font-family: Cardo, serif;
+			font-weight: 400;
+			background-color: #111111;
+			color: #f9f9f9;
+		}
+		table.data-table tr:last-child td {
+			border-bottom: none;
+		}
+		.page-nav-arrow {
+			position: fixed;
+			top: 50%;
+			transform: translateY(-50%);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 3rem;
+			height: 3rem;
+			border-radius: 9999px;
+			background-color: #111111;
+			color: #f9f9f9;
+			font-family: Cardo, serif;
+			font-size: 1.75rem;
+			line-height: 1;
+			text-decoration: none;
+			box-shadow: 6px 6px 9px rgba(0,0,0,.2);
+			z-index: 1000;
+		}
+		.page-nav-arrow:hover {
+			background-color: #636363;
+		}
+		.page-nav-arrow-prev {
+			left: 1.5rem;
+		}
+	</style>
+</head>
+<body>
+<a href="gnc-control-hardware.html" class="page-nav-arrow page-nav-arrow-prev" aria-label="Previous page: GNC &amp; Control Hardware">&#8249;</a>
+<h1>Aerodynamic Parameters</h1>
+<p>Stability derivatives, mass properties, and geometric parameters used in the flight-dynamics model.</p>
+
+<table class="data-table">
+<thead>
+<tr><th>Datum</th><th>Value</th></tr>
+</thead>
+<tbody>
+<tr><td>$S$</td><td>$0.0404\;\text{m}^2$</td></tr>
+<tr><td>$b$</td><td>$0.535\;\text{m}$</td></tr>
+<tr><td>$W$</td><td>$0.155\;\text{kg}$</td></tr>
+<tr><td>$T$</td><td>$1.177\;\text{N}$</td></tr>
+<tr><td>$\lambda$</td><td>$\approx 1$</td></tr>
+<tr><td>$\Lambda$</td><td>$\approx 0^\circ$</td></tr>
+<tr><td>$\Gamma$</td><td>$\approx 2^\circ$</td></tr>
+<tr><td>$\Gamma_\text{eff}$</td><td>$\approx 4.5^\circ$</td></tr>
+<tr><td>$Z_{CP}$</td><td>$0.035\;\text{m}$</td></tr>
+<tr><td>$l_t$</td><td>$0.205\;\text{m}$</td></tr>
+<tr><td>$MAC$</td><td>$0.0854\;\text{m}$</td></tr>
+<tr><td>$AR$</td><td>$7.09$</td></tr>
+<tr><td>$I_{xx}$</td><td>$4.76 \times 10^{-3}\ \text{kg} \cdot \text{m}^2$</td></tr>
+<tr><td>$I_{yy}$</td><td>$3.13 \times 10^{-3}\ \text{kg} \cdot \text{m}^2$</td></tr>
+<tr><td>$I_{zz}$</td><td>$7.12 \times 10^{-3}\ \text{kg} \cdot \text{m}^2$</td></tr>
+<tr><td>$\alpha_0$</td><td>$-5.239^\circ$</td></tr>
+<tr><td>$C_{L_\alpha}$</td><td>$4.826\;\text{rad}^{-1}$</td></tr>
+<tr><td>$C_{m_\alpha}$</td><td>$-0.386\;\text{rad}^{-1}$</td></tr>
+<tr><td>$V_\text{stall}$</td><td>$6.70\;\text{m/s}$</td></tr>
+<tr><td>$C_V$</td><td>$0.0535$</td></tr>
+<tr><td>$C_{n_\beta}$</td><td>$0.205\;\text{rad}^{-1}$</td></tr>
+<tr><td>$C_{\ell_\beta}$</td><td>$-0.042\;\text{rad}^{-1}$</td></tr>
+<tr><td>$C_{\ell_p}$</td><td>$-0.804\;\text{rad}^{-1}$</td></tr>
+<tr><td>$k_\text{yaw}$</td><td>$3.23 \times 10^{-4}$</td></tr>
+<tr><td>$k_\text{pitch}$</td><td>$3.85 \times 10^{-4}$</td></tr>
+</tbody>
+</table>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+		renderMathInElement(document.body, {
+			delimiters: [{ left: "$", right: "$", display: false }]
+		});
+	});
+</script>
+</body>
+</html>
