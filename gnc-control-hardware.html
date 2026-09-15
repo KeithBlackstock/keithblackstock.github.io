@@ -92,13 +92,16 @@
 <h2>GATED</h2>
 <p>An AUX-selectable roll-limiting mode. It only attenuates pilot roll input in the direction that would increase the current bank angle &#8212; as roll approaches a configurable max, same-direction stick input tapers toward zero, but rolling back toward level is always available. No auto-leveling, no attitude hold, just a soft ceiling on bank angle.</p>
 
-<h2>ATTITUDE</h2>
-<p>An alternative to INAV&#8217;s stock ANGLE mode. Rather than cascading through a PID outer loop that outputs a rotation rate, ATTITUDE strips that out and applies a raw, linear 0&#8211;100% multiplier directly from angle error to control-surface output &#8212; trading ANGLE&#8217;s &#8220;correction speed&#8221; feel for something closer to spring stiffness.</p>
+<h2>LEVEL</h2>
+<p>An alternative to INAV&#8217;s stock ANGLE mode. Rather than cascading through a PID outer loop that outputs a rotation rate, LEVEL blends self-leveling with raw manual passthrough based on stick deflection &#8212; at center stick the aircraft fully self-levels, at full deflection control hands off to completely unassisted flight. It also compensates pitch for bank angle, so altitude holds through turns without fighting for lift.</p>
 
 <h2>DIVE</h2>
 <p>A throttle-limiting mode for fixed-wing aircraft. It attenuates throttle proportionally to nose-down pitch angle, cutting to idle at a configurable dive angle, so the motor spools down automatically in a dive and comes right back the instant the nose comes up.</p>
 
-<p>You can view the code <a href="https://github.com/KeithBlackstock/inav_GATE_edited" target="_blank" rel="noreferrer noopener">here</a>.</p>
+<h2>PATH</h2>
+<p>An AUX-selectable, pilot-supervised roll-steering mode. It autonomously banks the aircraft along a pure-pursuit route through the loaded mission&#8217;s waypoints, but only ever touches roll &#8212; pitch, yaw, and throttle stay under full pilot control the whole time, so airspeed, altitude, and heading corrections are never taken away. If the route ends or no mission is loaded, it just holds wings-level instead of steering blindly.</p>
+
+<p>You can view the code <a href="https://github.com/KeithBlackstock/inav_GATE_edited/tree/experimental" target="_blank" rel="noreferrer noopener">here</a>.</p>
 
 <h2>Obstacle-Avoidance Control-Law Simulation</h2>
 <p>To validate the roll/pitch logic before trusting it to real hardware, I built a real-time 3D flight simulator (Python + Three.js). The aircraft flies a simple PD-controlled, wings-level path until terrain enters an ellipsoidal &#8220;Region of Avoidance&#8221; projected ahead along its velocity vector &#8212; at which point the penetration depth and surface normal of the nearest threat drive proportional roll and pitch corrections to steer clear, all while holding airspeed and compensating for gravity.</p>
