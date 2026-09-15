@@ -170,19 +170,19 @@ h1.has-background,h2.has-background,h3.has-background,h4.has-background,h5.has-b
 
 
 
-<p>Welcome to my portfolio. Here, I present a detailed exploration of my pet project developing an autonomous drone —  working title: &#8220;Stingray&#8221;. The airframe is primarily made from PLA, chosen for its ease of printing and rigidity, with critical areas reinforced with TPU to improve shock absorption.</p>
+<p>Welcome to my portfolio &#8212; a detailed look at my pet project, an autonomous drone working title &#8220;Stingray.&#8221; The airframe is primarily PLA, chosen for ease of printing and rigidity, with critical areas reinforced in TPU for shock absorption.</p>
 
 
 
-<p>The drone is controlled by a Matek F411-WTE flight controller running INAV 7.0. Key components include the FS-iA6B 2.4GHz iBUS Receiver for reliable communication, a 900MHz Telemetry Radio Module for long-range data transfer, and a HGLRC M100 UBLOX GPS for navigation.</p>
+<p>It&#8217;s controlled by a Matek F411-WTE flight controller running INAV 7.0, with an FS-iA6B 2.4GHz iBUS receiver for communication, a 900MHz telemetry radio for long-range data, and a HGLRC M100 UBLOX GPS for navigation.</p>
 
 
 
-<p>It is powered by an EMAX ECO II 2207 &#8211; 1700Kv Brushless Motor and a 2S Lithium-Polymer battery, balancing power with efficiency. This portfolio provides an in-depth look at the integration of these technologies into a functional and versatile drone design. </p>
+<p>It&#8217;s powered by an EMAX ECO II 2207 1700Kv brushless motor and a 2S LiPo battery, balancing power with efficiency.</p>
 
 
 
-<p>Explore the sections below for more insights into this project.</p>
+<p>Explore below for more on the build.</p>
 
 
 
@@ -199,7 +199,7 @@ h1.has-background,h2.has-background,h3.has-background,h4.has-background,h5.has-b
 
 
 
-<p>I started developing a secondary design, tentatively called &#8220;Sparrow&#8221; — a simplified, streamlined version of the Stingray. In its CAD design, I used more advanced surface modeling techniques, resulting in the smooth, continuous curvature shown below.</p>
+<p>I also started a secondary design, tentatively called &#8220;Sparrow&#8221; — a simplified, streamlined version of the Stingray, using more advanced surface modeling for the smooth, continuous curvature shown below.</p>
 
 
 
@@ -211,9 +211,6 @@ h1.has-background,h2.has-background,h3.has-background,h4.has-background,h5.has-b
 
 
 
-<p class="has-text-align-center">Can&#8217;t have an aeronautics project without a little CFD&#8230;</p>
-
-
 
 <figure class="wp-block-image aligncenter size-large"><img loading="lazy" decoding="async" width="1024" height="506" src="images/CFD-1024x506.png" alt="" class="wp-image-150" srcset="images/CFD-1024x506.png 1024w, images/CFD-300x148.png 300w, images/CFD-768x379.png 768w, images/CFD.png 1268w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
 
@@ -221,9 +218,6 @@ h1.has-background,h2.has-background,h3.has-background,h4.has-background,h5.has-b
 
 <figure class="wp-block-image aligncenter size-large"><img loading="lazy" decoding="async" width="1024" height="501" src="images/CFD2-1024x501.png" alt="" class="wp-image-151" srcset="images/CFD2-1024x501.png 1024w, images/CFD2-300x147.png 300w, images/CFD2-768x376.png 768w, images/CFD2.png 1277w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
 
-
-
-<p>Nice to see the pressure differential validate the airfoil selection (NACA 4410).</p>
 
 
 
@@ -241,7 +235,7 @@ h1.has-background,h2.has-background,h3.has-background,h4.has-background,h5.has-b
 
 
 
-<p>The dihedral effect refers to the self-stabilizing behavior of an aircraft where the wings are angled upward from the root to the tip. This design feature enhances the aircraft&#8217;s roll stability and its ability to self-correct in response to side-slip conditions.<br><br>When an aircraft with dihedral wings encounters a side-slip (such as from crosswind or turbulence), the lower wing (the one on the side to which the aircraft is slipping) experiences an increase in effective angle of attack and, consequently, an increase in lift compared to the higher wing. This increased lift on the lower wing generates a rolling moment that counteracts the initial slip, helping the aircraft to return to level flight without pilot input.<br><br>In an aircraft with a dihedral wing and ruddervators, applying yaw can indirectly control roll. When the ruddervators induce a yaw, the resulting side-slip increases the lift on one wing due to the dihedral angle, thus creating a roll moment. This coupling allows a pilot to effectively control the plane’s orientation using just the ruddervators.</p>
+<p>The dihedral effect is the self-stabilizing behavior of an aircraft whose wings angle upward from root to tip, improving roll stability and the ability to self-correct in a side-slip.<br><br>During a side-slip &#8212; from crosswind or turbulence, say &#8212; the lower wing sees an increased effective angle of attack, and therefore more lift, than the higher wing. That imbalance creates a rolling moment back toward level, without pilot input.<br><br>With dihedral and ruddervators together, yaw can indirectly control roll: a ruddervator-induced yaw creates a side-slip, which the dihedral angle turns into a lift imbalance and thus a roll moment &#8212; letting a pilot steer the plane&#8217;s orientation using the ruddervators alone.</p>
 
 
 
@@ -253,7 +247,7 @@ h1.has-background,h2.has-background,h3.has-background,h4.has-background,h5.has-b
 
 
 
-<p>When designing an RC plane that uses dihedral for yaw-roll coupling to achieve roll control through ruddervators alone, one is faced with the challenge of requiring a significant dihedral angle to ensure adequate roll response from yaw inputs. However, an overpronounced dihedral that overpowers directional stability can result in Dutch Roll — a type of oscillatory instability in which the plane erratically gyrates in response to both yaw and roll disturbances. <br><br>To combat this tendency, I&#8217;ve introduced a ventral tailfin to the design. This ventral fin enhances directional stability by providing additional vertical surface area beneath the fuselage. This increase in vertical stabilizing surface helps counteract the adverse yaw movements and stabilizes the aircraft against the Dutch roll tendencies induced by the pronounced dihedral. Thus, the ventral tailfin serves to balance the enhanced roll control achieved through dihedral with improved yaw stability, ensuring smoother and more stable flight dynamics.</p>
+<p>Using dihedral for yaw-roll coupling &#8212; controlling roll through ruddervators alone &#8212; requires a fairly aggressive dihedral angle for adequate response. But push it too far and directional stability suffers, risking Dutch Roll: an oscillatory instability where the plane gyrates in both yaw and roll.<br><br>To counter this, I added a ventral tailfin, which increases vertical surface area beneath the fuselage and restores directional stability &#8212; balancing the roll authority gained from dihedral against the yaw stability it costs, for smoother, more stable flight.</p>
 
 
 
