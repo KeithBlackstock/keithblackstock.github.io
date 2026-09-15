@@ -34,7 +34,7 @@
 			text-align: center;
 			margin: 0;
 		}
-		img {
+		img, video {
 			max-width: min(1024px, 100%);
 			width: 100%;
 			height: auto;
@@ -103,5 +103,8 @@
 <h2>Obstacle-Avoidance Control-Law Simulation</h2>
 <p>To validate the roll/pitch logic before trusting it to real hardware, I built a real-time 3D flight simulator (Python + Three.js). The aircraft flies a simple PD-controlled, wings-level path until terrain enters an ellipsoidal &#8220;Region of Avoidance&#8221; projected ahead along its velocity vector &#8212; at which point the penetration depth and surface normal of the nearest threat drive proportional roll and pitch corrections to steer clear, all while holding airspeed and compensating for gravity.</p>
 <p>You can view the code <a href="https://github.com/KeithBlackstock/Aircraft-Simulation" target="_blank" rel="noreferrer noopener">here</a>.</p>
+<video width="1024" height="576" autoplay loop muted playsinline preload="metadata">
+	<source src="videos/flight.mp4" type="video/mp4" />
+</video>
 </body>
 </html>
