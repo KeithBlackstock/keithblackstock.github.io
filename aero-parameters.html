@@ -64,6 +64,27 @@
 		table.data-table tr:last-child td {
 			border-bottom: none;
 		}
+		table.data-table tr.has-formula {
+			cursor: pointer;
+		}
+		table.data-table tr.has-formula:hover {
+			background-color: #f2f2f2;
+		}
+		table.data-table tr.has-formula.active {
+			background-color: #ececec;
+		}
+		.formula-popover {
+			position: absolute;
+			background-color: #111111;
+			color: #f9f9f9;
+			padding: 0.75rem 1.25rem;
+			border-radius: 0.5rem;
+			box-shadow: 6px 6px 9px rgba(0,0,0,.2);
+			z-index: 1000;
+		}
+		.formula-popover .katex {
+			color: #f9f9f9;
+		}
 		.page-nav-arrow {
 			position: fixed;
 			top: 50%;
@@ -124,16 +145,54 @@
 <tr><td>$C_{n_\beta}$</td><td>$0.205\;\text{rad}^{-1}$</td></tr>
 <tr><td>$C_{\ell_\beta}$</td><td>$-0.042\;\text{rad}^{-1}$</td></tr>
 <tr><td>$C_{\ell_p}$</td><td>$-0.804\;\text{rad}^{-1}$</td></tr>
-<tr><td>$k_\text{yaw}$</td><td>$3.23 \times 10^{-4}$</td></tr>
-<tr><td>$k_\text{pitch}$</td><td>$3.85 \times 10^{-4}$</td></tr>
+<tr class="has-formula" data-formula="k_{\text{yaw}}=\rho\left(A_r\sin^2\theta\right)l_t"><td>$k_\text{yaw}$</td><td>$3.23 \times 10^{-4}$</td></tr>
+<tr class="has-formula" data-formula="k_{\text{pitch}}=\rho\left(A_r\cos^2\theta\right)l_t"><td>$k_\text{pitch}$</td><td>$3.85 \times 10^{-4}$</td></tr>
 </tbody>
 </table>
+
+<div id="formula-popover" class="formula-popover" hidden></div>
 
 <script>
 	document.addEventListener("DOMContentLoaded", function() {
 		renderMathInElement(document.body, {
 			delimiters: [{ left: "$", right: "$", display: false }]
 		});
+
+		var popover = document.getElementById("formula-popover");
+		var activeRow = null;
+
+		function closePopover() {
+			popover.hidden = true;
+			if (activeRow) activeRow.classList.remove("active");
+			activeRow = null;
+		}
+
+		document.querySelectorAll("tr.has-formula").forEach(function(row) {
+			row.addEventListener("click", function(e) {
+				e.stopPropagation();
+				if (activeRow === row) {
+					closePopover();
+					return;
+				}
+				if (activeRow) activeRow.classList.remove("active");
+				activeRow = row;
+				row.classList.add("active");
+
+				katex.render(row.dataset.formula, popover, { displayMode: true });
+				popover.hidden = false;
+
+				var rowRect = row.getBoundingClientRect();
+				var popRect = popover.getBoundingClientRect();
+				var top = window.scrollY + rowRect.bottom + 8;
+				var left = window.scrollX + rowRect.left + rowRect.width / 2 - popRect.width / 2;
+				left = Math.max(8, Math.min(left, window.scrollX + document.documentElement.clientWidth - popRect.width - 8));
+				popover.style.top = top + "px";
+				popover.style.left = left + "px";
+			});
+		});
+
+		document.addEventListener("click", closePopover);
+		popover.addEventListener("click", function(e) { e.stopPropagation(); });
 	});
 </script>
 </body>
