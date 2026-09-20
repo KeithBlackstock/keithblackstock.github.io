@@ -97,5 +97,8 @@
 <body>
 <a href="gnc-control-hardware.html" class="page-nav-arrow page-nav-arrow-prev" aria-label="Previous page: GNC &amp; Control Hardware">&#8249;</a>
 <h1>Pilot-3</h1>
+<img width="1272" height="767" src="images/Pilot303.png" alt="Pilot-3 flight controller PCB layout with labeled components: GD32F303CC6 microcontroller, SOSET 3225 8MHz oscillator, AMS-1117 3.3V regulator, BMP-280 barometer, and ICM-42688P IMU" />
+<p>The F405 &#8220;Wing Mini&#8221; had already done everything asked of it &#8212; the modified build of INAV flashed clean, and each of the new flight modes functioned properly. By any rational mission-requirements analysis, there was no reason to replace it. So naturally, the next step was to design a worse one from scratch.</p>
+<p>Pilot-3 is built around a GD32F303CC6 &#8212; a slower part, with a thinner peripheral set and less community tooling than the STM32F405 it&#8217;s replacing. On paper, it&#8217;s a downgrade in every dimension the aircraft cares about. But the GD32F303 shares its register map with the STM32F103, one of the most thoroughly documented, forum-dissected MCUs in the DIY drone world &#8212; offering a well-lit path for a custom design.</p>
 </body>
 </html>
