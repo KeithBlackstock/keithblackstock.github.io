@@ -76,21 +76,19 @@
 			transform: translateY(-50%);
 			display: flex;
 			align-items: center;
-			justify-content: center;
-			width: 3rem;
-			height: 3rem;
-			border-radius: 9999px;
-			background-color: #111111;
-			color: #f9f9f9;
+			gap: 0.5rem;
+			color: #111111;
 			font-family: Cardo, serif;
-			font-size: 1.75rem;
+			font-size: 1.1rem;
 			line-height: 1;
 			text-decoration: none;
-			box-shadow: 6px 6px 9px rgba(0,0,0,.2);
 			z-index: 1000;
 		}
 		.page-nav-arrow:hover {
-			background-color: #636363;
+			color: #636363;
+		}
+		.page-nav-arrow-chevron {
+			font-size: 1.75rem;
 		}
 		.page-nav-arrow-prev {
 			left: 1.5rem;
@@ -101,7 +99,7 @@
 	</style>
 </head>
 <body>
-<a href="gnc-control-hardware.html" class="page-nav-arrow page-nav-arrow-prev" aria-label="Previous page: GNC &amp; Control Hardware">&#8249;</a>
+<a href="gnc-control-hardware.html" class="page-nav-arrow page-nav-arrow-prev" aria-label="Previous page: GNC &amp; Custom Firmware"><span class="page-nav-arrow-chevron">&#8249;</span><span>GNC &amp; Custom Firmware</span></a>
 <h1>Pilot-3</h1>
 <img width="1272" height="767" src="images/Pilot303.png" alt="Pilot-3 flight controller PCB layout with labeled components: GD32F303CC6 microcontroller, SOSET 3225 8MHz oscillator, AMS-1117 3.3V regulator, BMP-280 barometer, and ICM-42688P IMU" />
 <p>The F405 &#8220;Wing Mini&#8221; had already done everything asked of it &#8212; the modified build of INAV flashed clean, and each of the new flight modes functioned properly. By any rational mission-requirements analysis, there was no reason to replace it. So naturally, the next step was to design a worse one from scratch.</p>

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>GNC &amp; Control Hardware &#8211; Blackstock</title>
+	<title>GNC &amp; Custom Firmware &#8211; Blackstock</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&amp;family=Cardo:ital,wght@0,400;0,700;1,400&amp;display=swap" />
@@ -70,21 +70,19 @@
 			transform: translateY(-50%);
 			display: flex;
 			align-items: center;
-			justify-content: center;
-			width: 3rem;
-			height: 3rem;
-			border-radius: 9999px;
-			background-color: #111111;
-			color: #f9f9f9;
+			gap: 0.5rem;
+			color: #111111;
 			font-family: Cardo, serif;
-			font-size: 1.75rem;
+			font-size: 1.1rem;
 			line-height: 1;
 			text-decoration: none;
-			box-shadow: 6px 6px 9px rgba(0,0,0,.2);
 			z-index: 1000;
 		}
 		.page-nav-arrow:hover {
-			background-color: #636363;
+			color: #636363;
+		}
+		.page-nav-arrow-chevron {
+			font-size: 1.75rem;
 		}
 		.page-nav-arrow-prev {
 			left: 1.5rem;
@@ -95,9 +93,9 @@
 	</style>
 </head>
 <body>
-<a href="index.html" class="page-nav-arrow page-nav-arrow-prev" aria-label="Previous page: Home">&#8249;</a>
-<a href="pilot-3.html" class="page-nav-arrow page-nav-arrow-next" aria-label="Next page: Pilot-3">&#8250;</a>
-<h1>GNC &amp; Control Hardware</h1>
+<a href="index.html" class="page-nav-arrow page-nav-arrow-prev" aria-label="Previous page: Home"><span class="page-nav-arrow-chevron">&#8249;</span><span>Home</span></a>
+<a href="pilot-3.html" class="page-nav-arrow page-nav-arrow-next" aria-label="Next page: Pilot-3"><span>Pilot-3</span><span class="page-nav-arrow-chevron">&#8250;</span></a>
+<h1>GNC &amp; Custom Firmware</h1>
 <img width="1031" height="655" src="images/MAV_navigation.png" alt="MAV navigation" />
 <p>The cool thing about the modern drone hobby is that (just about) everything has already been figured out by the DIY community.</p>
 <p>This hasn&#8217;t stopped me from rolling my own autopilot logic, compiling bespoke firmware, and eventually designing my own flight controller&#8230;</p>
