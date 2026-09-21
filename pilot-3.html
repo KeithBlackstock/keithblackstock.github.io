@@ -108,11 +108,12 @@
 <p>Pilot-3 is built around a GD32F303CC6 &#8212; a slower part, with a thinner peripheral set and less community tooling than the STM32F405 it&#8217;s replacing. On paper, it&#8217;s a downgrade in every dimension the aircraft cares about. But the GD32F303 shares its register map with the STM32F103, one of the most thoroughly documented, forum-dissected MCUs in the DIY drone world &#8212; offering a well-lit path for a custom design.</p>
 <p>What Pilot-3 actually buys me isn&#8217;t better flight characteristics &#8212; it&#8217;s a stack I understand from the ground up, on hardware I&#8217;m free to reshape however the next drone iteration demands.</p>
 <ul>
-	<li><strong>GD32F303CC6</strong> &#8212; ARM Cortex-M4 microcontroller; shares a register map with the well-documented STM32F103, giving the custom design a proven path despite being a less capable part than the F405&#8217;s STM32.</li>
+	<li><strong>GD32F303CC6</strong> &#8212; ARM Cortex-M4 microcontroller</li>
 	<li><strong>ICM-42688P</strong> &#8212; 6-axis IMU (accelerometer + gyroscope) handling inertial sensing for attitude estimation.</li>
 	<li><strong>BMP-280</strong> &#8212; Barometric pressure sensor used for altitude measurement.</li>
 	<li><strong>AMS-1117 3.3V</strong> &#8212; Linear voltage regulator, stepping down battery voltage to the 3.3V rail the MCU and sensors run on.</li>
 	<li><strong>SOSET 3225 8MHz</strong> &#8212; Crystal oscillator providing the MCU&#8217;s clock reference.</li>
 </ul>
+<img width="2964" height="2199" loading="lazy" decoding="async" src="images/Fabricated_PCB.jpg" alt="Fabricated Pilot-3 flight controller PCB" />
 </body>
 </html>
