@@ -101,7 +101,10 @@
 <body>
 <a href="gnc-custom-firmware.html" class="page-nav-arrow page-nav-arrow-prev" aria-label="Previous page: GNC &amp; Custom Firmware"><span class="page-nav-arrow-chevron">&#8249;</span><span>GNC &amp; Custom Firmware</span></a>
 <h1>Pilot-3</h1>
+<div class="image-row">
 <img width="1272" height="767" src="images/Pilot303.png" alt="Pilot-3 flight controller PCB layout with labeled components: GD32F303CC6 microcontroller, SOSET 3225 8MHz oscillator, AMS-1117 3.3V regulator, BMP-280 barometer, and ICM-42688P IMU" />
+<img width="1007" height="891" src="images/Pilot303_wiring.png" alt="Pilot-3 flight controller wiring diagram" />
+</div>
 <p>The F405 &#8220;Wing Mini&#8221; had already done everything asked of it &#8212; the modified build of INAV flashed clean, and each of the new flight modes functioned properly. By any rational mission-requirements analysis, there was no reason to replace it. So naturally, the next step was to design a worse one from scratch.</p>
 <p>Pilot-3 is built around a GD32F303CC6 &#8212; a slower part, with a thinner peripheral set and less community tooling than the STM32F405 it&#8217;s replacing. On paper, it&#8217;s a downgrade in every dimension the aircraft cares about. But the GD32F303 shares its register map with the STM32F103, one of the most thoroughly documented, forum-dissected MCUs in the DIY drone world &#8212; offering a well-lit path for a custom design.</p>
 <p>What Pilot-3 actually buys me isn&#8217;t better flight characteristics &#8212; it&#8217;s a stack I understand from the ground up, on hardware I&#8217;m free to reshape however the next drone iteration demands.</p>
@@ -118,5 +121,6 @@
 <img width="837" height="767" loading="lazy" decoding="async" src="images/PCB_render2.png" alt="Custom flight controller PCB render" />
 </div>
 <img width="2964" height="2199" loading="lazy" decoding="async" src="images/Fabricated_PCB.jpg" alt="Fabricated Pilot-3 flight controller PCB" />
+<p>Pilot-3 firmware: <a href="https://github.com/KeithBlackstock/Pilot_3">github.com/KeithBlackstock/Pilot_3</a></p>
 </body>
 </html>
