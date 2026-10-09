@@ -58,43 +58,67 @@
 			margin: 0;
 			font-family: Cardo, serif;
 		}
-		a:not(.page-nav-arrow) {
+		p a {
 			color: #111111;
 		}
-		a:not(.page-nav-arrow):hover {
+		p a:hover {
 			color: #636363;
 		}
-		.page-nav-arrow {
+		.site-nav {
 			position: fixed;
 			top: 50%;
+			left: 1.5rem;
 			transform: translateY(-50%);
 			display: flex;
-			align-items: center;
-			gap: 0.5rem;
-			color: #111111;
+			flex-direction: column;
+			gap: 1rem;
 			font-family: Cardo, serif;
 			font-size: 1.1rem;
-			line-height: 1;
-			text-decoration: none;
+			line-height: 1.2;
 			z-index: 1000;
 		}
-		.page-nav-arrow:hover {
-			color: #636363;
+		.site-nav a {
+			display: flex;
+			align-items: center;
+			gap: 0.4rem;
+			text-decoration: none;
 		}
-		.page-nav-arrow-chevron {
+		.site-nav-chevron {
+			display: inline-block;
+			width: 0.8rem;
 			font-size: 1.75rem;
+			line-height: 1;
 		}
-		.page-nav-arrow-prev {
-			left: 1.5rem;
+		.site-nav a:not([aria-current]) .site-nav-chevron {
+			visibility: hidden;
 		}
-		.page-nav-arrow-next {
-			right: 1.5rem;
+		.site-nav a[aria-current] {
+			font-weight: 700;
+		}
+		@media (max-width: 1500px) {
+			.site-nav {
+				position: static;
+				transform: none;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 0.5rem 1.5rem;
+			}
+		}
+		.site-nav a {
+			color: #111111;
+		}
+		.site-nav a:hover {
+			color: #636363;
 		}
 	</style>
 </head>
 <body>
-<a href="index.html" class="page-nav-arrow page-nav-arrow-prev" aria-label="Previous page: Home"><span class="page-nav-arrow-chevron">&#8249;</span><span>Home</span></a>
-<a href="pilot-3.html" class="page-nav-arrow page-nav-arrow-next" aria-label="Next page: Pilot-3"><span>Pilot-3</span><span class="page-nav-arrow-chevron">&#8250;</span></a>
+<nav class="site-nav" aria-label="Site">
+<a href="index.html"><span class="site-nav-chevron">&#8250;</span><span>Home</span></a>
+<a href="gnc-custom-firmware.html" aria-current="page"><span class="site-nav-chevron">&#8250;</span><span>GNC &amp; Custom Firmware</span></a>
+<a href="pilot-3.html"><span class="site-nav-chevron">&#8250;</span><span>Pilot-3</span></a>
+</nav>
 <h1>GNC &amp; Custom Firmware</h1>
 <img width="1031" height="655" src="images/MAV_navigation.png" alt="MAV navigation" />
 <p>The cool thing about the modern drone hobby is that (just about) everything has already been figured out by the DIY community.</p>
