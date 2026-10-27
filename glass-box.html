@@ -137,5 +137,10 @@
 <img width="1489" height="849" src="images/glassbox.png" alt="Glass Box" />
 <img width="1489" height="849" loading="lazy" decoding="async" src="images/glassbox2.png" alt="Glass Box, second view" />
 <p>The new flight controller works on the bench, but it doesn&#8217;t fit the avionics bay of Foamfly, the existing F405-kitted airframe. Foamfly is a working article I&#8217;m not willing to cannibalize for parts or space, so this variant gets its own model: a second airframe with an enlarged avionics bay sized for the Pilot-3, its wiring, and the telemetry stack. Continuing with the general theme of eliminating &#8220;black boxes&#8221;, I&#8217;m dubbing this model <strong>Glass Box</strong>.</p>
+<h2>Validation</h2>
+<p>So, does it all work? Yes, with caveats.</p>
+<p>On the bench, the dashboard&#8217;s live telemetry and tunable leveler parameters, throttle response, IMU attitude readouts, transmitter stick response, the ruddervator control mix, and attitude corrections all behaved as designed. The GPS reliably acquires and holds a fix on multiple satellites (28 on one occasion), and agrees with a known reference position. The barometer reads correctly on the bench, but it&#8217;s uncalibrated and not yet used in the control logic.</p>
+<p>In flight, attitude corrections are directionally validated: the stabilizer pushes the aircraft the right way, though the loop isn&#8217;t tuned yet. No brownouts or RC link losses were observed across flights.</p>
+<p>Every sortie thus far has been highly oscillatory, indicating a need for further tuning in the control gains, IMU filtering, and aerodynamics (Glass Box has similar, but not identical, datums to Foamfly). What&#8217;s left to chase is reliability and performance, not core function.</p>
 </body>
 </html>
