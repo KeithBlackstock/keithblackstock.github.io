@@ -144,7 +144,7 @@
 <h2>PATH</h2>
 <p>An AUX-selectable, pilot-supervised roll-steering mode. It autonomously banks the aircraft along a pure-pursuit route through the loaded mission&#8217;s waypoints, but only ever touches roll &#8212; pitch, yaw, and throttle stay under full pilot control the whole time, so airspeed, altitude, and heading corrections are never taken away. If the route ends or no mission is loaded, it just holds wings-level instead of steering blindly.</p>
 
-<p>You can view the code <a href="https://github.com/KeithBlackstock/inav_GATE_edited/tree/experimental" target="_blank" rel="noreferrer noopener">here</a>.</p>
+<p>You can view the code <a href="https://github.com/KeithBlackstock/inav_GATE_edited/tree/main" target="_blank" rel="noreferrer noopener">here</a>.</p>
 
 <h2>Obstacle-Avoidance Control-Law Simulation</h2>
 <p>To validate the roll/pitch logic before trusting it to real hardware, I built a real-time 3D flight simulator (Python + Three.js). The aircraft flies a simple PD-controlled, wings-level path until terrain enters an ellipsoidal &#8220;Region of Avoidance&#8221; projected ahead along its velocity vector &#8212; at which point the penetration depth and surface normal of the nearest threat drive proportional roll and pitch corrections to steer clear, all while holding airspeed and compensating for gravity.</p>
