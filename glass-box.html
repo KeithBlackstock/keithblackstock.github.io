@@ -136,13 +136,13 @@
 <h1>Glass Box</h1>
 <img width="1489" height="849" src="images/glassbox.png" alt="Glass Box" />
 <img width="1489" height="849" loading="lazy" decoding="async" src="images/glassbox2.png" alt="Glass Box, second view" />
-<img width="1897" height="1027" loading="lazy" decoding="async" src="images/P3dashboard.png" alt="Pilot-3 dashboard" />
+<img width="1920" height="1440" loading="lazy" decoding="async" src="images/GlassBox_field.jpg" alt="Glass Box aircraft in the field" />
 <p>The new flight controller works on the bench, but it doesn&#8217;t fit the avionics bay of Foamfly, the existing F405-kitted airframe. Foamfly is a working article I&#8217;m not willing to cannibalize for parts or space, so this variant gets its own model: a second airframe with an enlarged avionics bay sized for the Pilot-3, its wiring, and the telemetry stack. Continuing with the general theme of eliminating &#8220;black boxes&#8221;, I&#8217;m dubbing this model <strong>Glass Box</strong>.</p>
 <h2>Validation</h2>
 <p>So, does it all work? Yes, with caveats.</p>
 <p>On the bench, the dashboard&#8217;s live telemetry and tunable leveler parameters, throttle response, IMU attitude readouts, transmitter stick response, the ruddervator control mix, and attitude corrections all behaved as designed. The GPS reliably acquires and holds a fix on multiple satellites (28 on one occasion), and agrees with a known reference position. The barometer reads correctly and has since been calibrated, though it&#8217;s not yet used in the control logic.</p>
 <p>In flight, attitude corrections are directionally validated: the stabilizer pushes the aircraft the right way. No brownouts or RC link losses were observed across flights.</p>
 <p>Early sorties were highly oscillatory. Taming the attitude loop took quite a bit of work on the control gains and IMU filtering, but with that sorted, Glass Box now flies confidently. PATH mode has also been ported to the Pilot-3 firmware and exhibits proper waypoint-pursuing behavior on the ground, suggesting that supervised autonomous flight on the new platform is well within reach. What&#8217;s left to chase is reliability and performance, not core function.</p>
-<img width="1920" height="1440" loading="lazy" decoding="async" src="images/GlassBox_field.jpg" alt="Glass Box aircraft in the field" />
+<img width="1897" height="1027" loading="lazy" decoding="async" src="images/P3dashboard.png" alt="Pilot-3 dashboard" />
 </body>
 </html>
